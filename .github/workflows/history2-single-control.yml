@@ -1,0 +1,23 @@
+{
+  "name": "History2 single control",
+  "on": {
+    "push": {
+      "branches": [
+        "hist-single"
+      ]
+    }
+  },
+  "permissions": {},
+  "jobs": {
+    "marker": {
+      "name": "History2 single control",
+      "runs-on": "ubuntu-latest",
+      "timeout-minutes": 2,
+      "steps": [
+        {
+          "run": "echo HISTORY2_COMPLETE case=single variant=control event=$GITHUB_EVENT_NAME sha=$GITHUB_SHA ref=$GITHUB_REF"
+        }
+      ]
+    }
+  }
+}

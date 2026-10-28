@@ -1,0 +1,26 @@
+{
+  "name": "History2 single default",
+  "on": {
+    "push": {
+      "branches": [
+        "hist-single"
+      ],
+      "paths": [
+        "default-only.txt"
+      ]
+    }
+  },
+  "permissions": {},
+  "jobs": {
+    "marker": {
+      "name": "History2 single default",
+      "runs-on": "ubuntu-latest",
+      "timeout-minutes": 2,
+      "steps": [
+        {
+          "run": "echo HISTORY2_COMPLETE case=single variant=default event=$GITHUB_EVENT_NAME sha=$GITHUB_SHA ref=$GITHUB_REF"
+        }
+      ]
+    }
+  }
+}

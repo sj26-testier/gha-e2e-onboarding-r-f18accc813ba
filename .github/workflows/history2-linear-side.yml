@@ -1,0 +1,26 @@
+{
+  "name": "History2 linear side",
+  "on": {
+    "push": {
+      "branches": [
+        "hist-linear"
+      ],
+      "paths": [
+        "side.txt"
+      ]
+    }
+  },
+  "permissions": {},
+  "jobs": {
+    "marker": {
+      "name": "History2 linear side",
+      "runs-on": "ubuntu-latest",
+      "timeout-minutes": 2,
+      "steps": [
+        {
+          "run": "echo HISTORY2_COMPLETE case=linear variant=side event=$GITHUB_EVENT_NAME sha=$GITHUB_SHA ref=$GITHUB_REF"
+        }
+      ]
+    }
+  }
+}

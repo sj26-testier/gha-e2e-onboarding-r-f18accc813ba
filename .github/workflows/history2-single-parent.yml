@@ -1,0 +1,26 @@
+{
+  "name": "History2 single parent",
+  "on": {
+    "push": {
+      "branches": [
+        "hist-single"
+      ],
+      "paths": [
+        "parent.txt"
+      ]
+    }
+  },
+  "permissions": {},
+  "jobs": {
+    "marker": {
+      "name": "History2 single parent",
+      "runs-on": "ubuntu-latest",
+      "timeout-minutes": 2,
+      "steps": [
+        {
+          "run": "echo HISTORY2_COMPLETE case=single variant=parent event=$GITHUB_EVENT_NAME sha=$GITHUB_SHA ref=$GITHUB_REF"
+        }
+      ]
+    }
+  }
+}

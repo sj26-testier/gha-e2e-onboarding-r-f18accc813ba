@@ -1,0 +1,26 @@
+{
+  "name": "History2 criss right",
+  "on": {
+    "push": {
+      "branches": [
+        "hist-criss"
+      ],
+      "paths": [
+        "cc-right.txt"
+      ]
+    }
+  },
+  "permissions": {},
+  "jobs": {
+    "marker": {
+      "name": "History2 criss right",
+      "runs-on": "ubuntu-latest",
+      "timeout-minutes": 2,
+      "steps": [
+        {
+          "run": "echo HISTORY2_COMPLETE case=criss variant=right event=$GITHUB_EVENT_NAME sha=$GITHUB_SHA ref=$GITHUB_REF"
+        }
+      ]
+    }
+  }
+}

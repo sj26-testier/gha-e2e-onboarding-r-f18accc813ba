@@ -1,0 +1,26 @@
+{
+  "name": "History2 criss head",
+  "on": {
+    "push": {
+      "branches": [
+        "hist-criss"
+      ],
+      "paths": [
+        "cc-head.txt"
+      ]
+    }
+  },
+  "permissions": {},
+  "jobs": {
+    "marker": {
+      "name": "History2 criss head",
+      "runs-on": "ubuntu-latest",
+      "timeout-minutes": 2,
+      "steps": [
+        {
+          "run": "echo HISTORY2_COMPLETE case=criss variant=head event=$GITHUB_EVENT_NAME sha=$GITHUB_SHA ref=$GITHUB_REF"
+        }
+      ]
+    }
+  }
+}
